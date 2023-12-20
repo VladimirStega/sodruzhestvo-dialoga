@@ -17,7 +17,7 @@ body {
 	background-color: #f0f0f0;
 }
 .header {
-	padding: calc(var(--index) * 2.4) 0;
+	padding:0 0 calc(var(--index) * 2.4) 0;
 	font-family: arsenal_f, sans-serif;
 	font-size: calc(var(--index) * 2.4);
 	overflow: hidden;
@@ -27,7 +27,7 @@ body {
 	padding: calc(var(--index) * 2.75);
 	background-size: cover;
 	background-position: center;
-	height:calc(var(--index) * 30) ;
+	height:90vh ;
 	color: aliceblue;
 	transition: background-image 2.2s ease-in-out;
 }
@@ -40,12 +40,13 @@ body {
 	padding: calc(var(--index) * 2.75);
 }
 .magic-list__item {
-	cursor: none;
+	/* cursor: none; */
 	color: var(--black);
 	text-decoration: none;
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	line-height: .9;
-	padding: calc(var(--index) * 3) calc(var(--index) * 7.5);
+	padding: calc(var(--index) * 3) calc(var(--index) * 3) calc(var(--index) * 3) calc(var(--index) * 7.5);
 	border-bottom: 1px solid rgb(0 0 0 / .09);
 	counter-increment: my-counter;
 }
@@ -59,7 +60,6 @@ body {
 }
 .magic-list__item::before {
 	content: '(0' counter(my-counter) ')';
-	position: absolute;
 	font-size: calc(var(--index) * .95);
 	margin-left: calc(var(--index) * -2.25);
 	margin-top: calc(var(--index) / 2);
@@ -75,7 +75,8 @@ body {
 .cursor {
 	--width: calc(var(--index) * 22);
 	--height: calc(var(--index) * 14);
-	position: fixed;
+	margin-left: auto;
+	/* position: fixed; */
 	width: var(--width);
 	height: 0;
 	top: calc(var(--height) * -.5);
@@ -92,15 +93,17 @@ body {
 .cursor__image {
 	--cursor-transform: translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0);
 	position: relative;
-	width: calc(var(--width) * 2);
-	height: calc(var(--height) * 2);
-	top: calc(var(--height) * -.4);
-	left: calc(var(--width) * -.25);
+	width: calc(var(--width) * 1);
+	height: calc(var(--height) * 1);
+	/* top: calc(var(--height) * -.4); */
+	/* left: calc(var(--width) * -.25); */
 	background-size: cover;
 	background-position: center;
 	transform: var(--cursor-transform) scale(1.5);
 	transition: transform var(--transition-cursor);
-}
-.magic-list__item:hover .cursor__image {
+	will-change: transform;
+} */
+ .magic-list__item:hover .cursor__image { 
 	transform: var(--cursor-transform) scale(1);
+	will-change: transform;
 }
