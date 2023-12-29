@@ -87,6 +87,12 @@ body {
 	border: none;
 	border-left: 1.75px solid var(--black);
 	border-right: 1.75px solid var(--black);
+	transition: padding, font-size, var(--transition)
+}
+
+.btn__downlod:hover {
+	padding: calc(var(--index) * .5) calc(var(--index) * 1.2) ;
+	letter-spacing: calc(var(--index) * .18);
 }
 
 .cursor {
