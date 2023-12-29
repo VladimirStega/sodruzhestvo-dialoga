@@ -17,10 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  function downloadFile() {
-	var filename = "example.txt"; // Replace with the actual filename
-	var link = document.createElement('a');
-	link.href = "https://drive.google.com/file/d/1FWDZaj--QwQ3uLnVywuUHA0VHEjqDphQ/view?usp=drive_link"; // Replace with the actual link
-	link.download = filename;
-	link.click();
-  }
+  function downloadAgreement() {
+    var filename = "example.txt"; // Замените на фактическое имя файла
+    var link = document.createElement('a');
+    link.href = "https://drive.google.com/file/d/1FWDZaj--QwQ3uLnVywuUHA0VHEjqDphQ/view?usp=drive_link"; // Замените на фактическую ссылку
+    link.download = filename;
+    link.target = "_blank"; // Открывать в новом окне
+    link.click();
+}
+
+function downloadPlan() {
+    var filename = "example.txt"; // Замените на фактическое имя файла
+    var link = document.createElement('a');
+    link.href = "https://docs.google.com/document/d/1lycqubIxvhWNorgP4FDxiXtG4UmuezCq/edit?usp=drive_link&ouid=103672149086817692196&rtpof=true&sd=true"; // Замените на фактическую ссылку
+    link.download = filename;
+    link.target = "_blank"; // Открывать в новом окне
+    link.click();
+}

@@ -37,7 +37,7 @@ body {
 .magic-list {
 	font-family: arsenal_f, sans-serif;
 	font-size: calc(var(--index) * 2.4);
-	padding: calc(var(--index) * 2.75);
+	padding: calc(var(--index) * 1.7) calc(var(--index) * 2.75) calc(var(--index) * 2.75) calc(var(--index) * 2.75);
 }
 .magic-list__item {
 	/* cursor: none; */
@@ -72,6 +72,23 @@ body {
 .magic-list__item:hover::before {
 	transform: translate3d(calc(var(--index) * -5), 0, 0);
 }
+
+.btn__list {
+	display: flex;
+	justify-content: center;
+	padding: calc(var(--index) * 1) calc(var(--index) * 3) calc(var(--index) * .5) calc(var(--index) * 3);
+}
+
+.btn__downlod{
+	margin: calc(var(--index) * 1);
+	padding: calc(var(--index) * .5) calc(var(--index) * 1.2) ;
+	font-size: calc(var(--index) * 1);
+	cursor: pointer;
+	border: none;
+	border-left: 1.75px solid var(--black);
+	border-right: 1.75px solid var(--black);
+}
+
 .cursor {
 	--width: calc(var(--index) * 22);
 	--height: calc(var(--index) * 14);
