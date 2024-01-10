@@ -34,3 +34,12 @@ function downloadPlan() {
     link.target = "_blank"; // Открывать в новом окне
     link.click();
 }
+
+function downloadRegulations() {
+  var filename = "example.txt"; // Замените на фактическое имя файла
+  var link = document.createElement('a');
+  link.href = "https://docs.google.com/document/d/1irW4rQ0sIFU8-D4jzB3R0cn1JkOxKI_wZNPmHcFttks/edit"; // Замените на фактическую ссылку
+  link.download = filename;
+  link.target = "_blank"; // Открывать в новом окне
+  link.click();
+}
